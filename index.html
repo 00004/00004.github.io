@@ -40,7 +40,7 @@
     </div>
 </div>
 <div class="box btn-group">
-    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.dudu.duduhelper" class="btn-submit"><i class="i-android"></i>安卓版</a><a href="https://itunes.apple.com/us/app/wei-sheng-huo-shang-jia-zhu/id1040029961?l=zh&ls=1&mt=8" id="iosbtn" class="btn-submit"><i class="i-apple"></i>苹果版</a>
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.dudu.duduhelper"  id="androidbtn" class="btn-submit"><i class="i-android"></i>安卓版</a><a href="https://itunes.apple.com/us/app/wei-sheng-huo-shang-jia-zhu/id1040029961?l=zh&ls=1&mt=8"  class="btn-submit"><i class="i-apple"></i>苹果版</a>
 </div>
 <script type="text/javascript">
     function is_weixin() {
@@ -75,7 +75,7 @@
     }
 
     function ioshref(){
-        document.getElementById("iosbtn").href="javascript:";
+        document.getElementById("androidbtn").href="javascript:";
     }
     var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); display:none; width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 5%; padding:0 5%;}";
     if(isWeixin){
@@ -83,8 +83,8 @@
         loadStyleText(cssText);
     }
     var alertbox = document.getElementById('weixin-tip');
-    var iosbtn = document.getElementById('iosbtn');
-    iosbtn.onclick = function () {
+    var androidbtn = document.getElementById('androidbtn');
+    androidbtn.onclick = function () {
         alertbox.style.display = 'block';
     };
     alertbox.onclick = function () {
